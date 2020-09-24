@@ -10,6 +10,7 @@ import DateRangeIcon from "@material-ui/icons/DateRange";
 import RecordVoiceOverIcon from "@material-ui/icons/RecordVoiceOver";
 import { useStyles } from "./styles";
 import LinkButton from "../../components/@LinkButton/LinkButton";
+import MeetingAgenda from "../../components/@MeetingAgenda/MeetingAgenda";
 
 const ProtectedLevel = () => {
   const classes = useStyles();
@@ -45,7 +46,7 @@ const MeetingPage: React.FC = () => {
   return (
     <>
       <Navbar>
-        <Container>
+        <Container className="px-2">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
@@ -93,8 +94,8 @@ const MeetingPage: React.FC = () => {
         </div>
         <div className="mt-2">
           <b>Links</b>
-          <div className="mt-2">
-          <LinkButton
+          <div className="mt-1">
+            <LinkButton
               title="Google Meet"
               link="https://meet.google.com/abc-defg-hij"
             />
@@ -107,6 +108,10 @@ const MeetingPage: React.FC = () => {
               link="https://drive.google.com/abc-defg-hij"
             />
           </div>
+        </div>
+        <div className="mt-5">
+          <MeetingAgenda />
+          <MeetingAgenda />
         </div>
       </Container>
     </>
